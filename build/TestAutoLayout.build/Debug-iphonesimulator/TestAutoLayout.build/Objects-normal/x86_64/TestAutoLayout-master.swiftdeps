@@ -1,0 +1,7 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "9b7209e21c4f572c558f71e3eb5bb600"
+build_time: [522323063, 136509000]
+inputs:
+  "/Users/apple/Developer/TestAutoLayout/TableViewController.swift": [522322692, 0]
+  "/Users/apple/Developer/TestAutoLayout/TestAutoLayout/TableViewCell.swift": [522323062, 0]
+  "/Users/apple/Developer/TestAutoLayout/TestAutoLayout/AppDelegate.swift": [522318853, 0]

@@ -1,0 +1,1 @@
+ const unsigned char Pods_TestAutoLayoutUITestsVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_TestAutoLayoutUITests  PROJECT:Pods-1" "\n"; const double Pods_TestAutoLayoutUITestsVersionNumber __attribute__ ((used)) = (double)1.;
