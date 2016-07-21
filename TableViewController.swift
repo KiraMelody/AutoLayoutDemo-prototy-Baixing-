@@ -16,22 +16,27 @@ class TableViewController: UITableViewController {
     var distance = ["100米","200米","300米","400米","1000米"]
     var tag = ["火急","火急","置顶","置顶","一般"]
     var image = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"]
+    var sourceData = [Detail]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.registerClass(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.title = "租房"
-        let editItem = UIBarButtonItem(title:"编辑",style:.Plain,target:self,action:"edit");
+        let editItem = UIBarButtonItem(title:"添加",style:.Plain,target:self,action:"add");
         self.navigationItem.rightBarButtonItem = editItem
     }
     
-    func edit()
+    func add ()
     {
-        print("hahaha")
+        let item = Detail(_show: "circle.png",_title: "徐汇",_price: "100元",_distance: "一般",_index: sourceData.count)
+        sourceData.append(item)
+        tableView.reloadData()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -50,7 +55,6 @@ class TableViewController: UITableViewController {
         return 5
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TableViewCell", forIndexPath: indexPath) as! TableViewCell
 
@@ -58,14 +62,35 @@ class TableViewController: UITableViewController {
         cell.priceLabel.text = price[indexPath.row]
         cell.distanceLabel.text = distance[indexPath.row]
         cell.tagLabel.text = tag[indexPath.row]
-        cell.showImage.image = UIImage(named: "\(indexPath.row + 1).jpg")
+        cell.showImage.image = UIImage(named: "circle.png")
         cell.showImage.contentMode = UIViewContentMode.ScaleAspectFit
+        cell.selectIndexPath = indexPath
         print ("\(indexPath.row + 1).jpg")
+        
+        
+        //设置存储信息
+        let info = Detail(_show: "circle.png",_title: titlename[indexPath.row],_price: price[indexPath.row],_distance: distance[indexPath.row],_index: indexPath.row)
+        sourceData.append(info)
+        save(info, key: "\(indexPath.row)")
+        //设置同步
+        NSUserDefaults.standardUserDefaults().synchronize()
         return cell
     }
     
+    func save(detail:Detail, key: String) {
+        let savedData = NSKeyedArchiver.archivedDataWithRootObject(detail)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(savedData, forKey: key)
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let vc = DetailViewController();
+        vc.selectIndexPath = indexPath
+        self.navigationController!.pushViewController(vc,animated:true);
+
+    }
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 250.0
+        return 200.0
     }
 
 }

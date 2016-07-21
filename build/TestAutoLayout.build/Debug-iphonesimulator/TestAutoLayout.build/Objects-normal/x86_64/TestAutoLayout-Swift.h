@@ -87,6 +87,8 @@ typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
 typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import ObjectiveC;
+@import Foundation;
 @import CoreGraphics;
 #endif
 
@@ -108,9 +110,38 @@ SWIFT_CLASS("_TtC14TestAutoLayout11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSCoder;
+
+SWIFT_CLASS("_TtC14TestAutoLayout6Detail")
+@interface Detail : NSObject <NSCoding>
+@property (nonatomic, copy) NSString * __nonnull show;
+@property (nonatomic, copy) NSString * __nonnull title;
+@property (nonatomic, copy) NSString * __nonnull price;
+@property (nonatomic, copy) NSString * __nonnull distance;
+@property (nonatomic) NSInteger index;
+- (nonnull instancetype)initWith_show:(NSString * __nonnull)_show _title:(NSString * __nonnull)_title _price:(NSString * __nonnull)_price _distance:(NSString * __nonnull)_distance _index:(NSInteger)_index OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)encodeWithCoder:(NSCoder * __nonnull)aCoder;
+@end
+
 @class UIImageView;
 @class UILabel;
-@class NSCoder;
+@class NSIndexPath;
+@class NSBundle;
+
+SWIFT_CLASS("_TtC14TestAutoLayout20DetailViewController")
+@interface DetailViewController : UIViewController
+@property (nonatomic, strong) UIImageView * __null_unspecified showImage;
+@property (nonatomic, strong) UILabel * __null_unspecified titleLabel;
+@property (nonatomic, strong) UILabel * __null_unspecified priceLabel;
+@property (nonatomic, strong) UILabel * __null_unspecified distanceLabel;
+@property (nonatomic, strong) NSIndexPath * __null_unspecified selectIndexPath;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC14TestAutoLayout13TableViewCell")
 @interface TableViewCell : UITableViewCell
@@ -119,6 +150,7 @@ SWIFT_CLASS("_TtC14TestAutoLayout13TableViewCell")
 @property (nonatomic, strong) UILabel * __null_unspecified priceLabel;
 @property (nonatomic, strong) UILabel * __null_unspecified distanceLabel;
 @property (nonatomic, strong) UILabel * __null_unspecified tagLabel;
+@property (nonatomic, strong) NSIndexPath * __null_unspecified selectIndexPath;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
 - (void)awakeFromNib;
@@ -126,8 +158,6 @@ SWIFT_CLASS("_TtC14TestAutoLayout13TableViewCell")
 @end
 
 @class UITableView;
-@class NSIndexPath;
-@class NSBundle;
 
 SWIFT_CLASS("_TtC14TestAutoLayout19TableViewController")
 @interface TableViewController : UITableViewController
@@ -136,12 +166,15 @@ SWIFT_CLASS("_TtC14TestAutoLayout19TableViewController")
 @property (nonatomic, copy) NSArray<NSString *> * __nonnull distance;
 @property (nonatomic, copy) NSArray<NSString *> * __nonnull tag;
 @property (nonatomic, copy) NSArray<NSString *> * __nonnull image;
+@property (nonatomic, copy) NSArray<Detail *> * __nonnull sourceData;
 - (void)viewDidLoad;
-- (void)edit;
+- (void)add;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * __nonnull)tableView;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (void)save:(Detail * __nonnull)detail key:(NSString * __nonnull)key;
+- (void)tableView:(UITableView * __nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (CGFloat)tableView:(UITableView * __nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

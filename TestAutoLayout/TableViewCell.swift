@@ -16,6 +16,7 @@ class TableViewCell: UITableViewCell {
     var priceLabel : UILabel! = UILabel()
     var distanceLabel : UILabel! = UILabel()
     var tagLabel : UILabel! = UILabel()
+    var selectIndexPath : NSIndexPath! = NSIndexPath()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -41,7 +42,7 @@ class TableViewCell: UITableViewCell {
             make.top.equalTo(contentView).offset(5)
             make.leading.equalTo(contentView).offset(5)
             make.bottom.equalTo(contentView).offset(-5)
-            make.width.equalTo(165)
+            make.width.equalTo(250)
         }
         
         titleLabel.snp_makeConstraints { (make) -> Void in
