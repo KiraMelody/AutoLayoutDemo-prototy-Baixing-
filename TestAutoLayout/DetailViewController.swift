@@ -19,13 +19,14 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "信息"
+        self.edgesForExtendedLayout = .None
         view.backgroundColor = UIColor.whiteColor()
         view.addSubview(showImage)
         view.addSubview(titleLabel)
         view.addSubview(priceLabel)
         view.addSubview(distanceLabel)
 
-        showImage.contentMode = .ScaleAspectFill
+        showImage.contentMode = .ScaleAspectFit
         titleLabel.font = UIFont.boldSystemFontOfSize(40)
         priceLabel.font = UIFont.systemFontOfSize(30)
         priceLabel.textColor = UIColor.purpleColor()
@@ -34,10 +35,8 @@ class DetailViewController: UIViewController {
         
         showImage.snp_makeConstraints { (make) -> Void in
             make.top.leading.trailing.equalTo(view)
-            make.height.equalTo(100)
-            make.centerX.equalTo(view)
+            make.height.equalTo(showImage.snp_width)
         }
-        
         titleLabel.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(showImage.snp_bottom).offset(10)
             make.width.equalTo(view).offset(-10)

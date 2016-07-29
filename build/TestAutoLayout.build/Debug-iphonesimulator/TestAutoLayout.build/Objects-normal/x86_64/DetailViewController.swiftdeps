@@ -6,28 +6,28 @@ provides-nominal:
 provides-member:
 - ["C14TestAutoLayout20DetailViewController", ""]
 provides-dynamic-lookup:
-- "priceLabel"
-- "viewDidLoad"
-- "showImage"
 - "selectIndexPath"
-- "didReceiveMemoryWarning"
 - "distanceLabel"
+- "viewDidLoad"
 - "titleLabel"
+- "priceLabel"
+- "showImage"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- "UILabel"
+- "UIViewController"
+- "UIImageView"
+- !private "NSUserDefaults"
 - !private "UIImage"
 - !private "Detail"
+- "NSIndexPath"
 - !private "UIFont"
 - !private "UIColor"
-- "UIViewController"
-- !private "Void"
-- "UIImageView"
+- "UILabel"
+- !private "NSData"
 - !private "NSKeyedUnarchiver"
 - !private "StringLiteralType"
-- !private "NSData"
-- "NSIndexPath"
 - "DetailViewController"
-- !private "NSUserDefaults"
+- !private "Void"
 depends-member:
 - ["PSs9AnyObject", "NSIndexPath"]
 - !private ["PSs9AnyObject", "NSKeyedUnarchiver"]
@@ -46,6 +46,7 @@ depends-member:
 - ["PSs9AnyObject", "didReceiveMemoryWarning"]
 - !private ["PSs9AnyObject", "distance"]
 - ["PSs9AnyObject", "distanceLabel"]
+- !private ["PSs9AnyObject", "edgesForExtendedLayout"]
 - !private ["PSs9AnyObject", "font"]
 - !private ["PSs9AnyObject", "grayColor"]
 - !private ["PSs9AnyObject", "height"]
@@ -62,6 +63,7 @@ depends-member:
 - ["PSs9AnyObject", "showImage"]
 - !private ["PSs9AnyObject", "snp_bottom"]
 - !private ["PSs9AnyObject", "snp_makeConstraints"]
+- !private ["PSs9AnyObject", "snp_width"]
 - !private ["PSs9AnyObject", "standardUserDefaults"]
 - !private ["PSs9AnyObject", "systemFontOfSize"]
 - !private ["PSs9AnyObject", "text"]
@@ -75,6 +77,7 @@ depends-member:
 - !private ["PSs9AnyObject", "whiteColor"]
 - !private ["PSs9AnyObject", "width"]
 - ["PSs9AnyObject", ""]
+- !private ["PSs23ArrayLiteralConvertible", "None"]
 - !private ["Sb", "deinit"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["VSC7CGPoint", "deinit"]
@@ -94,6 +97,7 @@ depends-member:
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["PSs11CVarArgType", "distance"]
 - ["PSs11CVarArgType", "distanceLabel"]
+- !private ["PSs11CVarArgType", "edgesForExtendedLayout"]
 - !private ["PSs11CVarArgType", "font"]
 - !private ["PSs11CVarArgType", "grayColor"]
 - !private ["PSs11CVarArgType", "image"]
@@ -108,6 +112,7 @@ depends-member:
 - ["PSs11CVarArgType", "showImage"]
 - !private ["PSs11CVarArgType", "snp_bottom"]
 - !private ["PSs11CVarArgType", "snp_makeConstraints"]
+- !private ["PSs11CVarArgType", "snp_width"]
 - !private ["PSs11CVarArgType", "standardUserDefaults"]
 - !private ["PSs11CVarArgType", "systemFontOfSize"]
 - !private ["PSs11CVarArgType", "text"]
@@ -154,6 +159,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["PSs23CustomStringConvertible", "distance"]
 - ["PSs23CustomStringConvertible", "distanceLabel"]
+- !private ["PSs23CustomStringConvertible", "edgesForExtendedLayout"]
 - !private ["PSs23CustomStringConvertible", "font"]
 - !private ["PSs23CustomStringConvertible", "grayColor"]
 - !private ["PSs23CustomStringConvertible", "image"]
@@ -168,6 +174,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "showImage"]
 - !private ["PSs23CustomStringConvertible", "snp_bottom"]
 - !private ["PSs23CustomStringConvertible", "snp_makeConstraints"]
+- !private ["PSs23CustomStringConvertible", "snp_width"]
 - !private ["PSs23CustomStringConvertible", "standardUserDefaults"]
 - !private ["PSs23CustomStringConvertible", "systemFontOfSize"]
 - !private ["PSs23CustomStringConvertible", "text"]
@@ -197,6 +204,7 @@ depends-member:
 - ["C14TestAutoLayout20DetailViewController", "deinit"]
 - ["C14TestAutoLayout20DetailViewController", "didReceiveMemoryWarning"]
 - ["C14TestAutoLayout20DetailViewController", "distanceLabel"]
+- !private ["C14TestAutoLayout20DetailViewController", "edgesForExtendedLayout"]
 - ["C14TestAutoLayout20DetailViewController", "init"]
 - ["C14TestAutoLayout20DetailViewController", "priceLabel"]
 - ["C14TestAutoLayout20DetailViewController", "selectIndexPath"]
@@ -209,7 +217,8 @@ depends-member:
 - ["PSs9Equatable", "NSIndexPath"]
 - !private ["PSs9Equatable", "NSKeyedUnarchiver"]
 - !private ["PSs9Equatable", "NSUserDefaults"]
-- !private ["PSs9Equatable", "ScaleAspectFill"]
+- !private ["PSs9Equatable", "None"]
+- !private ["PSs9Equatable", "ScaleAspectFit"]
 - !private ["PSs9Equatable", "UIColor"]
 - !private ["PSs9Equatable", "UIFont"]
 - !private ["PSs9Equatable", "UIImage"]
@@ -222,6 +231,7 @@ depends-member:
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
 - !private ["PSs9Equatable", "distance"]
 - ["PSs9Equatable", "distanceLabel"]
+- !private ["PSs9Equatable", "edgesForExtendedLayout"]
 - !private ["PSs9Equatable", "font"]
 - !private ["PSs9Equatable", "grayColor"]
 - !private ["PSs9Equatable", "image"]
@@ -236,6 +246,7 @@ depends-member:
 - ["PSs9Equatable", "showImage"]
 - !private ["PSs9Equatable", "snp_bottom"]
 - !private ["PSs9Equatable", "snp_makeConstraints"]
+- !private ["PSs9Equatable", "snp_width"]
 - !private ["PSs9Equatable", "standardUserDefaults"]
 - !private ["PSs9Equatable", "systemFontOfSize"]
 - !private ["PSs9Equatable", "text"]
@@ -252,7 +263,7 @@ depends-member:
 - ["PSs8Hashable", "NSIndexPath"]
 - !private ["PSs8Hashable", "NSKeyedUnarchiver"]
 - !private ["PSs8Hashable", "NSUserDefaults"]
-- !private ["PSs8Hashable", "ScaleAspectFill"]
+- !private ["PSs8Hashable", "ScaleAspectFit"]
 - !private ["PSs8Hashable", "UIColor"]
 - !private ["PSs8Hashable", "UIFont"]
 - !private ["PSs8Hashable", "UIImage"]
@@ -265,6 +276,7 @@ depends-member:
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
 - !private ["PSs8Hashable", "distance"]
 - ["PSs8Hashable", "distanceLabel"]
+- !private ["PSs8Hashable", "edgesForExtendedLayout"]
 - !private ["PSs8Hashable", "font"]
 - !private ["PSs8Hashable", "grayColor"]
 - !private ["PSs8Hashable", "image"]
@@ -279,6 +291,7 @@ depends-member:
 - ["PSs8Hashable", "showImage"]
 - !private ["PSs8Hashable", "snp_bottom"]
 - !private ["PSs8Hashable", "snp_makeConstraints"]
+- !private ["PSs8Hashable", "snp_width"]
 - !private ["PSs8Hashable", "standardUserDefaults"]
 - !private ["PSs8Hashable", "systemFontOfSize"]
 - !private ["PSs8Hashable", "text"]
@@ -312,6 +325,7 @@ depends-member:
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "distance"]
 - ["PSo8NSCoding", "distanceLabel"]
+- !private ["PSo8NSCoding", "edgesForExtendedLayout"]
 - !private ["PSo8NSCoding", "font"]
 - !private ["PSo8NSCoding", "grayColor"]
 - !private ["PSo8NSCoding", "image"]
@@ -325,6 +339,7 @@ depends-member:
 - ["PSo8NSCoding", "showImage"]
 - !private ["PSo8NSCoding", "snp_bottom"]
 - !private ["PSo8NSCoding", "snp_makeConstraints"]
+- !private ["PSo8NSCoding", "snp_width"]
 - !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "textColor"]
 - !private ["PSo8NSCoding", "title"]
@@ -350,6 +365,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "UILabel"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "distanceLabel"]
+- !private ["PSo26NSExtensionRequestHandling", "edgesForExtendedLayout"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "priceLabel"]
 - ["PSo26NSExtensionRequestHandling", "selectIndexPath"]
@@ -363,7 +379,6 @@ depends-member:
 - !private ["CSo11NSIndexPath", "row"]
 - !private ["CSo17NSKeyedUnarchiver", "unarchiveObjectWithData"]
 - !private ["PSo16NSMutableCopying", "init"]
-- !private ["CSo8NSNumber", "deinit"]
 - !private ["CSo8NSObject", "Detail"]
 - !private ["CSo8NSObject", "NSData"]
 - ["CSo8NSObject", "NSIndexPath"]
@@ -382,6 +397,7 @@ depends-member:
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "distance"]
 - ["CSo8NSObject", "distanceLabel"]
+- !private ["CSo8NSObject", "edgesForExtendedLayout"]
 - !private ["CSo8NSObject", "font"]
 - !private ["CSo8NSObject", "grayColor"]
 - !private ["CSo8NSObject", "image"]
@@ -396,6 +412,7 @@ depends-member:
 - ["CSo8NSObject", "showImage"]
 - !private ["CSo8NSObject", "snp_bottom"]
 - !private ["CSo8NSObject", "snp_makeConstraints"]
+- !private ["CSo8NSObject", "snp_width"]
 - !private ["CSo8NSObject", "standardUserDefaults"]
 - !private ["CSo8NSObject", "systemFontOfSize"]
 - !private ["CSo8NSObject", "text"]
@@ -421,6 +438,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "distance"]
 - ["PSo16NSObjectProtocol", "distanceLabel"]
+- !private ["PSo16NSObjectProtocol", "edgesForExtendedLayout"]
 - !private ["PSo16NSObjectProtocol", "font"]
 - !private ["PSo16NSObjectProtocol", "grayColor"]
 - !private ["PSo16NSObjectProtocol", "image"]
@@ -435,6 +453,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "showImage"]
 - !private ["PSo16NSObjectProtocol", "snp_bottom"]
 - !private ["PSo16NSObjectProtocol", "snp_makeConstraints"]
+- !private ["PSo16NSObjectProtocol", "snp_width"]
 - !private ["PSo16NSObjectProtocol", "standardUserDefaults"]
 - !private ["PSo16NSObjectProtocol", "systemFontOfSize"]
 - !private ["PSo16NSObjectProtocol", "text"]
@@ -455,10 +474,13 @@ depends-member:
 - !private ["CSo14NSUserDefaults", "objectForKey"]
 - !private ["CSo14NSUserDefaults", "standardUserDefaults"]
 - ["PSs21NilLiteralConvertible", "Some"]
+- !private ["PSs13OptionSetType", "None"]
 - ["Sq", "Some"]
 - !private ["Sq", "deinit"]
 - !private ["PSs16OutputStreamType", "init"]
-- !private ["PSs16RawRepresentable", "ScaleAspectFill"]
+- !private ["PSs16RawRepresentable", "None"]
+- !private ["PSs16RawRepresentable", "ScaleAspectFit"]
+- !private ["PSs14SetAlgebraType", "None"]
 - !private ["PSs10Streamable", "init"]
 - !private ["SS", "init"]
 - !private ["PSs30StringInterpolationConvertible", "init"]
@@ -471,6 +493,7 @@ depends-member:
 - ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "snp_bottom"]
 - !private ["PSo29UIAccessibilityIdentification", "snp_makeConstraints"]
+- !private ["PSo29UIAccessibilityIdentification", "snp_width"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo29UIAccessibilityIdentification", "textColor"]
 - !private ["PSo12UIAppearance", "addSubview"]
@@ -481,6 +504,7 @@ depends-member:
 - ["PSo12UIAppearance", "init"]
 - !private ["PSo12UIAppearance", "snp_bottom"]
 - !private ["PSo12UIAppearance", "snp_makeConstraints"]
+- !private ["PSo12UIAppearance", "snp_width"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "textColor"]
 - ["PSo21UIAppearanceContainer", "NSIndexPath"]
@@ -496,6 +520,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "contentMode"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - ["PSo21UIAppearanceContainer", "distanceLabel"]
+- !private ["PSo21UIAppearanceContainer", "edgesForExtendedLayout"]
 - !private ["PSo21UIAppearanceContainer", "font"]
 - !private ["PSo21UIAppearanceContainer", "image"]
 - ["PSo21UIAppearanceContainer", "init"]
@@ -504,6 +529,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "showImage"]
 - !private ["PSo21UIAppearanceContainer", "snp_bottom"]
 - !private ["PSo21UIAppearanceContainer", "snp_makeConstraints"]
+- !private ["PSo21UIAppearanceContainer", "snp_width"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - !private ["PSo21UIAppearanceContainer", "textColor"]
 - !private ["PSo21UIAppearanceContainer", "title"]
@@ -524,6 +550,7 @@ depends-member:
 - ["PSo18UIContentContainer", "UILabel"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "distanceLabel"]
+- !private ["PSo18UIContentContainer", "edgesForExtendedLayout"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "priceLabel"]
 - ["PSo18UIContentContainer", "selectIndexPath"]
@@ -541,6 +568,7 @@ depends-member:
 - ["PSo17UICoordinateSpace", "init"]
 - !private ["PSo17UICoordinateSpace", "snp_bottom"]
 - !private ["PSo17UICoordinateSpace", "snp_makeConstraints"]
+- !private ["PSo17UICoordinateSpace", "snp_width"]
 - !private ["PSo17UICoordinateSpace", "text"]
 - !private ["PSo17UICoordinateSpace", "textColor"]
 - !private ["PSo13UIDynamicItem", "addSubview"]
@@ -551,6 +579,7 @@ depends-member:
 - ["PSo13UIDynamicItem", "init"]
 - !private ["PSo13UIDynamicItem", "snp_bottom"]
 - !private ["PSo13UIDynamicItem", "snp_makeConstraints"]
+- !private ["PSo13UIDynamicItem", "snp_width"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "textColor"]
 - !private ["VSC12UIEdgeInsets", "deinit"]
@@ -567,6 +596,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "contentMode"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UIFocusEnvironment", "distanceLabel"]
+- !private ["PSo18UIFocusEnvironment", "edgesForExtendedLayout"]
 - !private ["PSo18UIFocusEnvironment", "font"]
 - !private ["PSo18UIFocusEnvironment", "image"]
 - ["PSo18UIFocusEnvironment", "init"]
@@ -575,6 +605,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "showImage"]
 - !private ["PSo18UIFocusEnvironment", "snp_bottom"]
 - !private ["PSo18UIFocusEnvironment", "snp_makeConstraints"]
+- !private ["PSo18UIFocusEnvironment", "snp_width"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - !private ["PSo18UIFocusEnvironment", "textColor"]
 - !private ["PSo18UIFocusEnvironment", "title"]
@@ -590,13 +621,14 @@ depends-member:
 - ["CSo11UIImageView", "init"]
 - !private ["CSo11UIImageView", "snp_bottom"]
 - !private ["CSo11UIImageView", "snp_makeConstraints"]
+- !private ["CSo11UIImageView", "snp_width"]
 - !private ["CSo7UILabel", "font"]
 - ["CSo7UILabel", "init"]
 - !private ["CSo7UILabel", "snp_bottom"]
 - !private ["CSo7UILabel", "snp_makeConstraints"]
 - !private ["CSo7UILabel", "text"]
 - !private ["CSo7UILabel", "textColor"]
-- !private ["PSo15UILayoutSupport", "deinit"]
+- !private ["VSC10UIRectEdge", "None"]
 - !private ["CSo11UIResponder", "Detail"]
 - !private ["CSo11UIResponder", "NSData"]
 - ["CSo11UIResponder", "NSIndexPath"]
@@ -613,6 +645,7 @@ depends-member:
 - !private ["CSo11UIResponder", "contentMode"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "distanceLabel"]
+- !private ["CSo11UIResponder", "edgesForExtendedLayout"]
 - !private ["CSo11UIResponder", "font"]
 - !private ["CSo11UIResponder", "image"]
 - ["CSo11UIResponder", "init"]
@@ -621,6 +654,7 @@ depends-member:
 - ["CSo11UIResponder", "showImage"]
 - !private ["CSo11UIResponder", "snp_bottom"]
 - !private ["CSo11UIResponder", "snp_makeConstraints"]
+- !private ["CSo11UIResponder", "snp_width"]
 - !private ["CSo11UIResponder", "text"]
 - !private ["CSo11UIResponder", "textColor"]
 - !private ["CSo11UIResponder", "title"]
@@ -637,6 +671,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "UILabel"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "distanceLabel"]
+- !private ["PSo16UIStateRestoring", "edgesForExtendedLayout"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "priceLabel"]
 - ["PSo16UIStateRestoring", "selectIndexPath"]
@@ -659,6 +694,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "contentMode"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UITraitEnvironment", "distanceLabel"]
+- !private ["PSo18UITraitEnvironment", "edgesForExtendedLayout"]
 - !private ["PSo18UITraitEnvironment", "font"]
 - !private ["PSo18UITraitEnvironment", "image"]
 - ["PSo18UITraitEnvironment", "init"]
@@ -667,6 +703,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "showImage"]
 - !private ["PSo18UITraitEnvironment", "snp_bottom"]
 - !private ["PSo18UITraitEnvironment", "snp_makeConstraints"]
+- !private ["PSo18UITraitEnvironment", "snp_width"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - !private ["PSo18UITraitEnvironment", "textColor"]
 - !private ["PSo18UITraitEnvironment", "title"]
@@ -683,9 +720,10 @@ depends-member:
 - ["CSo6UIView", "init"]
 - !private ["CSo6UIView", "snp_bottom"]
 - !private ["CSo6UIView", "snp_makeConstraints"]
+- !private ["CSo6UIView", "snp_width"]
 - !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "textColor"]
-- !private ["OSC17UIViewContentMode", "ScaleAspectFill"]
+- !private ["OSC17UIViewContentMode", "ScaleAspectFit"]
 - !private ["CSo16UIViewController", "Detail"]
 - !private ["CSo16UIViewController", "NSData"]
 - ["CSo16UIViewController", "NSIndexPath"]
@@ -699,6 +737,7 @@ depends-member:
 - !private ["CSo16UIViewController", "Void"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "distanceLabel"]
+- !private ["CSo16UIViewController", "edgesForExtendedLayout"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "priceLabel"]
 - ["CSo16UIViewController", "selectIndexPath"]
@@ -734,10 +773,12 @@ depends-member:
 - ["PSs12_Reflectable", "init"]
 - !private ["PSs12_Reflectable", "snp_bottom"]
 - !private ["PSs12_Reflectable", "snp_makeConstraints"]
+- !private ["PSs12_Reflectable", "snp_width"]
 - !private ["PSs12_Reflectable", "text"]
 - !private ["PSs12_Reflectable", "textColor"]
 depends-nominal:
 - "PSs9AnyObject"
+- !private "PSs23ArrayLiteralConvertible"
 - !private "Sb"
 - !private "V12CoreGraphics7CGFloat"
 - !private "VSC7CGPoint"
@@ -775,16 +816,17 @@ depends-nominal:
 - "CSo11NSIndexPath"
 - !private "CSo17NSKeyedUnarchiver"
 - !private "PSo16NSMutableCopying"
-- !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - !private "CSo14NSUserDefaults"
 - "PSs21NilLiteralConvertible"
+- !private "PSs13OptionSetType"
 - "Sq"
 - !private "PSs16OutputStreamType"
 - !private "PSs16RawRepresentable"
+- !private "PSs14SetAlgebraType"
 - !private "PSs10Streamable"
 - !private "SS"
 - !private "PSs30StringInterpolationConvertible"
@@ -802,7 +844,7 @@ depends-nominal:
 - !private "CSo7UIImage"
 - "CSo11UIImageView"
 - "CSo7UILabel"
-- !private "PSo15UILayoutSupport"
+- !private "VSC10UIRectEdge"
 - "CSo11UIResponder"
 - "PSo16UIStateRestoring"
 - "PSo18UITraitEnvironment"

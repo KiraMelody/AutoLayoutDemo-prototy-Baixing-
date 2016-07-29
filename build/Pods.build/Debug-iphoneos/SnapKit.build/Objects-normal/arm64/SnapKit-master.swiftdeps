@@ -1,16 +1,16 @@
-version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
-options: "4010c6cc10b5d387e45c0f081620f25f"
-build_time: [522317334, 393343000]
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "c00faea295bd12cc2e6e0dd42f48b00c"
+build_time: [522746687, 551817000]
 inputs:
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/Constraint.swift": !dirty [522317238, 0]
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/EdgeInsets.swift": !dirty [522317238, 0]
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/LayoutConstraint.swift": !dirty [522317238, 0]
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ConstraintMaker.swift": !dirty [522317238, 0]
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ConstraintRelation.swift": !dirty [522317238, 0]
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/Debugging.swift": !dirty [522317238, 0]
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ConstraintAttributes.swift": !dirty [522317238, 0]
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ConstraintDescription.swift": !dirty [522317238, 0]
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ConstraintItem.swift": !dirty [522317238, 0]
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/View+SnapKit.swift": !dirty [522317238, 0]
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/SnapKit.swift": !dirty [522317238, 0]
-  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ViewController+SnapKit.swift": !dirty [522317238, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/Constraint.swift": [522318588, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ConstraintAttributes.swift": [522318588, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ConstraintDescription.swift": [522318588, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ConstraintItem.swift": [522318588, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ConstraintMaker.swift": [522318588, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ConstraintRelation.swift": [522318588, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/Debugging.swift": [522318588, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/EdgeInsets.swift": [522318588, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/LayoutConstraint.swift": [522318588, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/SnapKit.swift": [522318588, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/View+SnapKit.swift": [522318588, 0]
+  "/Users/apple/Developer/TestAutoLayout/Pods/SnapKit/Source/ViewController+SnapKit.swift": [522318588, 0]
